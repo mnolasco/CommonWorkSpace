@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document title="error.jsf" id="d1">
+    <af:form id="f1">
+      <af:pageTemplate viewId="/plantillas/2F1CPlantilla.jsf" id="pt1">
+        <f:facet name="logo">
+          <af:image id="i1" source="" shortDesc="Copitox"
+                    inlineStyle="margin-top:5px; margin-left:10px; height:40px;"/>
+        </f:facet>
+        <f:facet name="contenido">
+          <af:panelGroupLayout id="pgl1" layout="vertical" halign="center" inlineStyle="background-color: White;">
+            <af:outputText value="Ocurrió una excepcion interna en el sistema." id="ot1"
+                           inlineStyle="font-size: 30px;font-weight: bold;"/>
+            <af:spacer width="10" height="10" id="s1"/>
+            <af:panelBox text="Causa del Error" id="pb1">
+              <af:outputText value="#{controllerContext.currentViewPort.exceptionData.cause}" id="ot2"
+                             inlineStyle="color: Red"/>
+            </af:panelBox>
+            <af:spacer width="10" height="10" id="s2"/>
+            <af:panelBox text="PanelBox1" id="pb2">
+              <af:outputText value="#{controllerContext.currentViewPort.exceptionData.message}" id="ot3"
+                             inlineStyle="color: Red"/>
+            </af:panelBox>
+            <af:link text="Haga clic aquí para volver" id="l1" action="volver" styleClass="editarIcon"/>
+          </af:panelGroupLayout>
+        </f:facet>
+      </af:pageTemplate>
+    </af:form>
+  </af:document>
+</f:view>

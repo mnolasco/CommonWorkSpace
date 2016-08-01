@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+    <af:xmlContent>
+    <afc:component>
+      <afc:description>Plantilla con dos filas. Una fila para la cabezera y otra para el contenido.</afc:description>
+      <afc:display-name>2F1CPlantilla</afc:display-name>
+      <afc:facet>
+        <afc:facet-name>logo</afc:facet-name>
+      </afc:facet>
+      <afc:facet>
+        <afc:facet-name>nombreApp</afc:facet-name>
+      </afc:facet>
+      <afc:facet>
+        <afc:facet-name>usuario</afc:facet-name>
+      </afc:facet>
+      <afc:facet>
+        <afc:facet-name>desUsuario</afc:facet-name>
+      </afc:facet>
+      <afc:facet>
+        <afc:facet-name>contenido</afc:facet-name>
+      </afc:facet>
+    </afc:component>
+  </af:xmlContent>
+  <af:resource type="javascript" source="/js/comun.js"/>
+  <af:panelStretchLayout id="pt_psl1" topHeight="58px" startWidth="0px" bottomHeight="5px" dimensionsFrom="parent">
+    <f:facet name="start">
+      <af:popup id="pBus">
+        <af:dialog id="dBus" title="Procesando consulta..." type="none" closeIconVisible="false">
+          <af:outputText value="Por favor espere unos segundos." id="pt_ot1"/>
+        </af:dialog>
+      </af:popup>
+    </f:facet>
+    <f:facet name="top">
+      <af:panelGridLayout id="pt_pgl1" styleClass="Cabezera">
+        <af:gridRow id="pt_gr1" height="100%">
+          <af:gridCell id="pt_gc1" width="20%">
+            <af:facetRef facetName="logo"/>
+          </af:gridCell>
+          <af:gridCell id="pt_gc2" width="20%">
+            <af:facetRef facetName="nombreApp"/>
+          </af:gridCell>
+          <af:gridCell id="pt_gc3" width="55%" halign="end">
+            <af:panelGroupLayout id="pgl4" layout="vertical" inlineStyle="margin-top:13px;margin-right:2px;"
+                                 halign="end" styleClass="AFBrandingBarItem">
+              <af:facetRef facetName="desUsuario"/>
+            </af:panelGroupLayout>
+          </af:gridCell>
+          <af:gridCell id="pt_gc4" width="5%" halign="end">
+            <af:panelGroupLayout id="pt_pgl2" layout="horizontal" halign="end"
+                                 inlineStyle="margin-top: 3px; margin-right: 5px;">
+              <af:facetRef facetName="usuario"/>
+            </af:panelGroupLayout>
+          </af:gridCell>
+        </af:gridRow>
+      </af:panelGridLayout>
+    </f:facet>
+    <f:facet name="center">
+      <af:facetRef facetName="contenido"/>
+    </f:facet>
+  </af:panelStretchLayout>
+</af:pageTemplateDef>

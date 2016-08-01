@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:document id="d1" title="Copitox - v1.0">
+    <!--<af:messages id="m1" globalOnly="true" inline="true"/>-->
+    <!--Estos mensajes permiten que no se muestre el popup de mensajes de error.-->
+    <af:form id="f1">
+      <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+        <af:dialog id="d2" title="Mensaje del Sistema" type="none">
+          <af:panelFormLayout id="pfl3">
+            <af:inputText label="Apellidos" id="it21"/>
+            <af:inputText label="Correo" id="it22"/>
+          </af:panelFormLayout>
+          <f:facet name="buttonBar">
+            <af:button text="Aceptar" id="b7"/>
+          </f:facet>
+        </af:dialog>
+      </af:popup>
+      <af:panelStretchLayout id="psl1" topHeight="58px" startWidth="200px" bottomHeight="5px" dimensionsFrom="parent">
+        <f:facet name="top">
+          <af:panelGridLayout id="pgl1" inlineStyle="background: linear-gradient(#0866C6, #0866C6 85%, #034081);">
+            <af:gridRow id="gr1" height="100%">
+              <af:gridCell id="gc1" width="20%">
+                <af:image id="i1" source="" shortDesc="Copitox"
+                          inlineStyle="margin-top:5px; margin-left:10px; height:40px;"/>
+              </af:gridCell>
+              <af:gridCell id="gc2" width="70%" halign="end">
+                <af:panelGroupLayout id="pgl4" layout="vertical" inlineStyle="margin-top:13px;margin-right:2px;"
+                                     halign="end" styleClass="AFBrandingBarItem">
+                  <af:panelGroupLayout id="pgl7" layout="horizontal" halign="center">
+                    <af:outputText id="ot1" value="Miguel Nolasco"
+                                   inlineStyle="font-size: 11pt;color: White;font-weight: bold;"/>
+                  </af:panelGroupLayout>
+                  <af:panelGroupLayout id="pgl8" layout="horizontal" halign="center">
+                    <af:outputText id="ot2" value="Último acceso: 10-10-2015 | 03:44 PM"
+                                   inlineStyle="font-size: 9pt;color: White;"/>
+                  </af:panelGroupLayout>
+                </af:panelGroupLayout>
+              </af:gridCell>
+              <af:gridCell id="gc3" width="5%" halign="end">
+                <af:panelGroupLayout id="pgl5" layout="horizontal" halign="end"
+                                     inlineStyle="margin-top: 3px; margin-right: 5px;">
+                  <af:button id="l2" icon="/imagenes/usuario40x40.png" shortDesc="Usuario" styleClass="UserButton"/>
+                </af:panelGroupLayout>
+              </af:gridCell>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </f:facet>
+        <f:facet name="center">
+          <af:panelTabbed position="above" id="pt1"
+                          inlineStyle="margin-left: 7px;margin-right: 7px;margin-top:7px;margin-bottom: 7px;">
+            <af:showDetailItem id="tab1" text="Ventas" stretchChildren="first">
+              <af:panelBox text="Nueva Venta" id="pb1" showDisclosure="false">
+                <f:facet name="toolbar">
+                  <af:button text="Toolbar" id="b4"/>
+                </f:facet>
+                <af:panelFormLayout id="pfl1" rows="5" maxColumns="2" styleClass="NoRequiredIcon">
+                  <af:inputText label="Label 1" id="it1"/>
+                  <af:inputText label="Label 2" id="it2"/>
+                  <af:inputText label="Label 3" id="it3"/>
+                  <af:inputText label="Label 4" id="it4"/>
+                  <af:inputText label="Label 5" id="it5"/>
+                  <af:inputText label="Label 6" id="it6"/>
+                  <af:inputText label="Label 7" id="it7"/>
+                  <af:inputText label="Label 8" id="it8"/>
+                  <af:inputText label="Label 9" id="it9"/>
+                  <af:inputDate label="Label 1" id="id1"/>
+                  <f:facet name="footer">
+                    <af:panelGroupLayout id="pgl3" layout="horizontal">
+                      <f:facet name="separator">
+                        <af:spacer width="10" height="10" id="s2"/>
+                      </f:facet>
+                      <af:button text="Normal" id="b2">
+                        <af:showPopupBehavior popupId="p1"/>
+                      </af:button>
+                      <af:button text="Deshabilitado" id="b3" disabled="true"/>
+                    </af:panelGroupLayout>
+                  </f:facet>
+                </af:panelFormLayout>
+              </af:panelBox>
+              <af:spacer width="10" height="10" id="s1"/>
+              <af:panelBox text="Detalles" id="pb2" showDisclosure="false">
+                <af:panelFormLayout id="pfl2" rows="5" maxColumns="2">
+                  <af:inputText label="Label 11" id="it11"/>
+                  <af:inputText label="Label 12" id="it12"/>
+                  <af:inputText label="Label 13" id="it13"/>
+                  <af:inputText label="Label 14" id="it14"/>
+                  <af:inputText label="Label 15" id="it15"/>
+                  <af:inputText label="Label 16" id="it16"/>
+                  <af:inputText label="Label 17" id="it17"/>
+                  <af:inputText label="Label 18" id="it18"/>
+                  <af:inputText label="Label 19" id="it19"/>
+                  <af:inputText label="Label 20" id="it20"/>
+                  <f:facet name="footer"/>
+                </af:panelFormLayout>
+              </af:panelBox>
+            </af:showDetailItem>
+            <af:showDetailItem id="tab2" text="Compras" stretchChildren="first" immediate="true">
+              <af:panelAccordion discloseMany="true" id="pa1" dimensionsFrom="children">
+                <af:showDetailItem id="pane1" text="Panel Label 1">
+                  <af:panelGroupLayout id="pgl2" layout="vertical" inlineStyle="margin-bottom: 5px;margin-left:5px;">
+                    <af:panelFormLayout id="pfl4" rows="3" maxColumns="3">
+                      <af:inputText label="Label 21" id="it23"/>
+                      <af:inputText label="Label 22" id="it24"/>
+                      <af:inputText label="Label 23" id="it25"/>
+                      <af:inputText label="Label 24" id="it26"/>
+                      <!--<af:spacer height="2" id="s3"/>-->
+                      <af:selectOneChoice label="Opciones" id="soc2" required="true">
+                        <af:selectItem label="Opcion 1" value="1" id="si1"/>
+                        <af:selectItem label="Opcion 2" value="2" id="si2"/>
+                        <af:selectItem label="Opcion 3" value="3" id="si3"/>
+                        <af:selectItem label="Opcion 4" value="4" id="si4"/>
+                        <af:selectItem label="Opcion 5" value="5" id="si5"/>
+                      </af:selectOneChoice>
+                      <af:selectBooleanCheckbox text="texto" label="Activo:" id="sbc1"/>
+                      <af:selectOneRadio label="Votar:" id="sor1" layout="horizontal">
+                        <af:selectItem label="Si" value="1" id="si11"/>
+                        <af:selectItem label="No" value="2" id="si12"/>
+                      </af:selectOneRadio>
+                    </af:panelFormLayout>
+                    <af:button text="button 1" id="b8"/>
+                  </af:panelGroupLayout>
+                </af:showDetailItem>
+                <af:showDetailItem id="pane2" text="Panel Label 2">
+                  <af:outputText value="Esta línea es una prueba dentro del panel accordion para validar" id="ot5"/>
+                  <af:selectOneChoice label="Opciones" id="soc1">
+                    <af:selectItem label="Opcion 1" value="1" id="si6"/>
+                    <af:selectItem label="Opcion 2" value="2" id="si7"/>
+                    <af:selectItem label="Opcion 3" value="3" id="si8"/>
+                    <af:selectItem label="Opcion 4" value="4" id="si9"/>
+                    <af:selectItem label="Opcion 5" value="5" id="si10"/>
+                  </af:selectOneChoice>
+                </af:showDetailItem>
+                <af:showDetailItem id="pane3" text="Panel Label 3"/>
+                <af:showDetailItem id="pane4" text="Panel Label 4"/>
+              </af:panelAccordion>
+            </af:showDetailItem>
+            <af:showDetailItem id="tab3" text="Clientes" stretchChildren="first">
+              <af:panelHeader id="ph1" text="Clientes">
+                <af:table var="per" rowBandingInterval="0" id="t1" rowSelection="single"
+                          value="#{viewScope.controladorPersona.personas}">
+                  <af:column id="c1" width="150" headerText="Apellido Paterno" sortable="false">
+                    <af:outputText value="#{per.apellidoPaterno}" id="ot3"/>
+                  </af:column>
+                  <af:column id="c2" width="150" headerText="Apellido Materno" sortable="false">
+                    <af:outputText value="#{per.apellidoMaterno}" id="ot4"/>
+                  </af:column>
+                  <af:column id="c3" width="150" headerText="Nombres" sortable="false">
+                    <af:outputText value="#{per.nombres}" id="ot8"/>
+                  </af:column>
+                  <af:column id="c4" width="50" headerText="Edad" sortable="false">
+                    <af:outputText value="#{per.edad}" id="ot6"/>
+                  </af:column>
+                  <af:column id="c5" width="150" headerText="DNI" sortable="false">
+                    <af:outputText value="#{per.dni}" id="ot7"/>
+                  </af:column>
+                </af:table>
+              </af:panelHeader>
+            </af:showDetailItem>
+            <af:showDetailItem id="tab4" text="Proveedores" stretchChildren="first"/>
+            <af:showDetailItem id="tab5" text="Productos" stretchChildren="first"/>
+            <af:showDetailItem id="tab6" text="Usuarios" stretchChildren="first">
+              <af:panelGroupLayout id="pgl0" layout="horizontal">
+                <f:facet name="separator">
+                  <af:spacer width="15" id="s3"/>
+                </f:facet>
+                <af:link id="b20" styleClass="agregarIcon" text="Agregar"/>
+                <af:link id="b21" text="Editar" styleClass="editarIcon"/>
+                <af:link id="b23" text="Desbloquear" styleClass="habilitarIcon"/>
+                <af:link id="l1" text="Desactivar" styleClass="desactivarIcon"/>
+                <af:link id="l3" text="Reestablecer Contraseña" styleClass="reestablecerIcon"/>
+              </af:panelGroupLayout>
+            </af:showDetailItem>
+          </af:panelTabbed>
+        </f:facet>
+      </af:panelStretchLayout>
+    </af:form>
+  </af:document>
+</f:view>

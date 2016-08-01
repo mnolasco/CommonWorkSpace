@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
+    <af:xmlContent>
+        <afc:component>
+            <afc:description>Inicia crud de una sola entidad.</afc:description>
+            <afc:display-name>crudSimplePlantilla</afc:display-name>
+            <afc:facet>
+                <afc:facet-name>contenido</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>links</afc:facet-name>
+            </afc:facet>
+            <afc:facet>
+                <afc:facet-name>filtros</afc:facet-name>
+            </afc:facet>
+            <afc:attribute>
+                <afc:attribute-name>titulo</afc:attribute-name>
+                <afc:attribute-class>java.lang.String</afc:attribute-class>
+                <afc:default-value>Gestión</afc:default-value>
+            </afc:attribute>
+        </afc:component>
+    </af:xmlContent>
+    <af:panelGroupLayout id="pglt1" layout="scroll">
+        <f:facet name="separator">
+            <af:spacer id="st1" height="10"/>
+        </f:facet>
+        <af:panelBorderLayout id="pblt1">
+            <f:facet name="start">
+                <af:outputText value="#{attrs.titulo}" id="ot1" styleClass="AFBrandingBarItem"
+                               inlineStyle="font-size: 14pt;font-weight: bold;margin-left: 5px;margin-top: 5px;color:#5091AD;"/>
+            </f:facet>
+            <af:spacer id="st2" width="10"/>
+            <f:facet name="end">
+                <af:facetRef facetName="filtros"/>
+            </f:facet>
+        </af:panelBorderLayout>
+        <af:panelGroupLayout id="pglt2" layout="horizontal" inlineStyle="margin-left: 10px;">
+            <f:facet name="separator">
+                <af:spacer width="10" id="st3"/>
+            </f:facet>
+            <af:facetRef facetName="links"/>
+        </af:panelGroupLayout>
+        <af:facetRef facetName="contenido"/>
+    </af:panelGroupLayout>
+</af:pageTemplateDef>

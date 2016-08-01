@@ -1,0 +1,396 @@
+@charset "UTF-8";
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('font-awesome-4.5.0/fonts/fontawesome-webfont.eot?v=4.5.0');
+  src: url('font-awesome-4.5.0/fonts/fontawesome-webfont.eot?#iefix&v=4.5.0')format('embedded-opentype'), url('font-awesome-4.5.0/fonts/fontawesome-webfont.woff2?v=4.5.0')format('woff2'), url('font-awesome-4.5.0/fonts/fontawesome-webfont.woff?v=4.5.0')format('woff'), url('font-awesome-4.5.0/fonts/fontawesome-webfont.ttf?v=4.5.0')format('truetype'), url('font-awesome-4.5.0/fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular')format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/***********************************************************************************************************************
+****************************************ESTILOS PARA ICONOS DE BOTONES Y LINKS******************************************
+***********************************************************************************************************************/
+
+.agregarIcon:before {
+  content: "\f067";
+  font-size: 12pt;
+  font-family: FontAwesome;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.editarIcon:before {
+  content: "\f040";
+  font-size: 12pt;
+  font-family: FontAwesome;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.desactivarIcon:before{
+  content: "\f05e";
+  font-size: 12pt;
+  font-family: FontAwesome;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.reestablecerIcon:before{
+  content: "\f09c";
+  font-size: 12pt;
+  font-family: FontAwesome;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.habilitarIcon:before{
+  content: "\f00c";
+  font-size: 12pt;
+  font-family: FontAwesome;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/***********************************************************************************************************************
+***************************************ESTILOS DE CLASE PERSONALIZADOS**************************************************
+***********************************************************************************************************************/
+
+.Cabezera{
+  background: linear-gradient(#0866C6, #0866C6 85%, #034081);
+}
+
+/*Oculta el icono de requerido en los inputText. Puede ser aplicado a cada inputText o al panelFormLayout*/
+.NoRequiredIcon .AFRequiredIconStyle {
+  display: none;
+}
+
+.LoginPanel af|panelBox::table:core:default {
+  border-bottom: solid 1px #d6dfe6;
+}
+
+af|button.UserButton {
+  border: 0px none transparent;
+  background-image: none;
+  background-color: transparent;
+}
+
+/***********************************************************************************************************************
+***************************************SELECTORES GLOBALES**************************************************************
+***********************************************************************************************************************/
+
+/*Tamaño del texto para todos los componentes*/
+.AFDefaultFont:alias {
+  font-size: 11pt;
+}
+
+.AFLinkHover:alias{
+  text-decoration: none;
+}
+
+/*********************************************BOTONES******************************************************************/
+
+@agent gecko, webkit, ie{
+  .AFButtonBackground:alias {
+    filter: none; /* evita que en versiones 9 y 8 del IE hereden el valor de esta propiedad del skin alta*/
+    border-radius: 0px;
+    background-image: none;
+    background-color: #337ab7;
+    border: solid 1px #337ab7;
+  }
+  
+  /*Estilo del texto del botón en estado normal.*/
+  .AFButtonForeground:alias{
+    color: White;
+    text-shadow: none;
+  }
+}
+
+/*Estilo del boton en estado deshabilitado y en todos los navegadores, incluido IE8.*/
+.AFButtonBackgroundDisabled:alias {
+  color: White;
+  text-shadow: none;
+  border-radius: 0px;
+  border-color: #77A0C4;
+  background-image: none;
+  background-color: #7AA8D0;
+}
+
+/*Estilo del boton en estado hover y en todos los navegadores, incluido IE8.*/
+.AFButtonBackgroundHover:alias {
+  color: White;
+  text-shadow: none;
+  border-radius: 0px;
+  background-image: none;
+  background-color: #286090;
+  border: 1px solid #286090;
+}
+
+/*Estilo del boton en estado active y en todos los navegadores, incluido IE8.*/
+.AFButtonBackgroundActive:alias{
+  color: White;
+  text-shadow: none;
+  border-radius: 0px;
+  background-image: none;
+  background-color: #5bc0de;
+  border: solid 1px #5bc0de;
+}
+
+/**********************************************ACCORDION***************************************************************/
+
+/*color de fondo de las cabezeras del accordion*/
+.AFAccordionHeaderGradientEndColor:alias {
+  color: #0866C6;
+}
+
+/*color de fondo de las cabezeras del accordion*/
+.AFAccordionHeaderGradientStartColor:alias {
+  color: #0866C6;
+}
+
+/**********************************************POPUP*******************************************************************/
+
+/*Estilo del pop up que se muestra por ejemplo al seleccionar una fecha*/
+.AFPopupSelector {
+  border: 1px solid #e5e5e5;/*#bce8f1*/
+}
+
+/***********************************************************************************************************************
+**************************************SELECTORES DE COMPONENTES*********************************************************
+***********************************************************************************************************************/
+
+af|document {
+  background-image: none;
+  background-color: #0866C6;
+}
+
+/**********************************************DIALOG******************************************************************/
+
+af|dialog {
+  border: 1px solid #e5e5e5; /*#bce8f1*/
+  /*-tr-default-content-width : -1; /*permite ajustar automaticamente el ancho del popup. Por ejemplo popups de validación*/
+  /*-tr-default-content-height : -1; /*permite ajustar automaticamente el alto del popup*/
+}
+
+af|dialog::title {
+  color: #31708f;
+}
+
+af|dialog::footer-content{
+  padding :0 10px 5px 20px;
+}
+
+af|dialog::content-start, af|dialog::content, af|dialog::content-end {
+  border-top: 1px solid #bce8f1;
+}
+
+@agent webkit,gecko {
+  af|dialog::header, af|dialog::header-start, af|dialog::header-end {
+    border-left: none;
+    border-right: none;
+    background-image: none;
+    background-color: #D9EDF7;
+  }
+}
+
+af|decorativeBox::frame {
+  color: White;
+  border-radius: 0px;
+  border: 0px none none;
+  background: linear-gradient(#0866C6, #0866C6 85%, #034081);
+}
+
+/**********************************************TABLE*******************************************************************/
+
+af|table {
+  border: none;
+  background-color: transparent;
+}
+
+af|table::data-table-VH-lines af|column::data-cell {
+  height: 40px;
+  border: none;
+  border-bottom: #dddddd 1px solid;
+}
+
+/**Estilo de la fila seleccionada**/
+af|table::data-row:selected:focused af|column::data-cell {
+  background-color: #0866C6;
+  color: White;
+}
+
+/**Estilo de la fila seleccionada cuando se intercambia el color de cada fila: banded**/
+af|table::data-row:selected:focused af|column::banded-data-cell {
+  background-color: #0866C6;
+  color: White;
+}
+
+af|column::column-header-cell {
+  color: #333333;
+  font-size: 12pt;
+  text-align: center;
+  border-right: none;
+  background-color: transparent;
+  border-bottom: 2px solid #dddddd;
+}
+
+af|column::data-cell, af|column::banded-data-cell {
+  color: #555555;
+  text-align: center;
+}
+
+af|column::column-header-table {
+  background-color: transparent;
+}
+
+/**********************************************PANEL BOX***************************************************************/
+
+af|panelBox {
+  border-color: #0866C6;
+  border-width: 2px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+af|panelBox::table:core:default {
+  background-color: #0866C6;
+  padding: 0px;
+}
+
+af|panelBox::header-element {
+  color: White;
+  font-size: 12pt;
+  margin-left: 5px;
+}
+
+/**********************************************HEADERS AND SUBHEADERS**************************************************/
+
+af|panelHeader::title-text0, af|showDetailHeader::title-text0{
+  color: #555555;
+  font-size: 13pt;
+}
+
+/**********************************************PANEL TABS**************************************************************/
+
+af|panelTabbed::body {
+  border: none;
+  border-radius: 0px;
+  background-color: White;
+}
+
+af|panelTabbed::header {
+  border: none;
+  background-color: White;
+}
+
+af|panelTabbed::tab af|panelTabbed::tab-text-link {
+  font-size: 13pt;
+}
+
+af|panelTabbed::tab:selected af|panelTabbed::tab-text-link {
+  color: #555555;
+  font-size: 13pt;
+}
+
+af|panelTabbed::tab {
+  border-bottom: solid 1px #dddddd;
+}
+
+af|panelTabbed::tab-content {
+  height: 13px;
+}
+
+/*Permite dar margen al borde izquierdo del primer tab*/
+af|panelTabbed::conveyor-belt-content {
+  margin-left: 6px;
+}
+
+af|panelTabbed::tab:selected {
+  border-top: solid 1px #dddddd;
+  border-left: solid 1px #dddddd;
+  border-right: solid 1px #dddddd;
+  border-bottom: none;
+}
+
+af|panelTabbed::tab:selected af|panelTabbed::tab-content {
+  border-left: none;
+  border-right: none;
+}
+
+/**********************************************PANEL ACCORDION*********************************************************/
+
+af|panelAccordion::header-title {
+  color: White;
+}
+
+af|panelAccordion::header, af|panelAccordion::header-subsequent {
+  border: none;
+  margin-top: 5px;
+}
+
+af|panelAccordion::header:disclosed {
+  border: none;
+}
+
+af|panelAccordion::body-content {
+  color: #555555;
+  margin-bottom: 6px;
+  border-color: #ececec;
+}
+
+/**********************************************INPUT AND SELECT COMPONENTS*********************************************/
+
+af|inputText::label, af|selectOneChoice::label, af|inputDate::label, af|selectBooleanCheckbox::label, 
+af|selectOneRadio::label {
+  color: #333333;
+}
+
+af|inputText::content, af|selectOneChoice::content{
+  color: #555555;
+  border-color: #cccccc;
+  height: 29px;
+  width: 200px;
+}
+
+af|inputDate::content {
+  color: #555555;
+  border-color: #cccccc;
+  height: 29px;
+  width: 167px;
+}
+
+af|selectBooleanCheckbox::content, af|selectOneRadio::content {
+  color: #555555;
+}
+
+af|selectOneRadio::content {
+  margin-top: 4px;
+}
+
+af|selectOneRadio::item-text {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+af|inputText:error::content, af|inputDate:error::content, af|selectOneChoice:error::content {
+  border-width: 1px;
+  border-color: #E57C67;
+}
+
+/**********************************************MESSAGES****************************************************************/
+
+af|message::type {
+  font-size: 11pt;
+  color: #333333;
+}
+
+af|message::error-icon {
+  content: url("iconos/error.png");
+}
+
+/*Espacio entre el mensaje de introduccion del popup y el contenido.*/
+af|message::component-messages-list-container{
+  margin-top: 5px;
+}

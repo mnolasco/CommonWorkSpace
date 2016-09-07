@@ -1,4 +1,4 @@
-package pvt.mke.comun.pruebas;
+package mnc.comun.pruebas;
 
 
 import java.io.UnsupportedEncodingException;
@@ -8,8 +8,8 @@ import javax.mail.MessagingException;
 
 import javax.mail.SendFailedException;
 
-import pvt.mke.comun.librerias.correo.CorreoUtil;
-import pvt.mke.comun.librerias.correo.MensajeCorreoUtil;
+import mnc.comun.librerias.correo.CorreoUtil;
+import mnc.comun.librerias.correo.MensajeCorreoUtil;
 
 public class PruebaCorreo {
   public static void main(String[] args) {

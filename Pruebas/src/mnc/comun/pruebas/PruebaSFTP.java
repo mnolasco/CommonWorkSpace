@@ -1,4 +1,4 @@
-package pvt.mke.comun.pruebas;
+package mnc.comun.pruebas;
 
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.SftpException;
@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
-import pvt.mke.comun.librerias.ftp.SFTPUtil;
+import mnc.comun.librerias.ftp.SFTPUtil;
 
 public class PruebaSFTP {
   public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package pvt.mke.comun.pruebas;
+package mnc.comun.pruebas;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import pvt.mke.comun.librerias.archivos.ZipUtil;
+import mnc.comun.librerias.archivos.ZipUtil;
 
 public class PruebaZip {
   public static void main(String[] args) {

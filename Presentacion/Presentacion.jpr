@@ -68,7 +68,7 @@
       <string v="oracle.adfdtinternal.model.ide.settings.ADFMSettings/adfmContentSet"/>
       <string v="oracle.toplink.workbench.addin/toplinkContentSet"/>
    </list>
-   <value n="defaultPackage" v="pvt.mke.comun.presentacion"/>
+   <value n="defaultPackage" v="mnc.comun.presentacion"/>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
          <string v="ADF_FACES"/>
@@ -89,50 +89,29 @@
    </hash>
    <hash n="oracle.jdeveloper.deploy.dt.DeploymentProfiles">
       <hash n="profileDefinitions">
-         <hash n="Comun_Presentacion_webapp">
-            <hash n="appletArchives"/>
-            <hash n="appletFiles">
-               <value n="autoInclude" v="true"/>
-               <list n="selectionFilters">
-                  <string v="oracle.jdevimpl.deploy.common.JavaSelectionFilter"/>
-               </list>
-            </hash>
+         <hash n="presentacionComun">
+            <value n="adflib-connectionDetails" v="false"/>
             <hash n="archiveOptions">
-               <value n="hasManifest" v="false"/>
+               <value n="hasManifest" v="true"/>
             </hash>
-            <value n="enterpriseAppName" v="Comun_Presentacion_webapp"/>
             <hash n="fileGroups">
                <list n="groups">
-                  <hash>
-                     <list n="contributors">
-                        <hash>
-                           <value n="type" v="5"/>
-                        </hash>
-                     </list>
-                     <value n="displayName" v="Web Files"/>
-                     <hash n="filters">
-                        <list n="rules">
-                           <hash>
-                              <value n="pattern" v="**"/>
-                              <value n="type" v="0"/>
-                           </hash>
-                        </list>
-                     </hash>
-                     <value n="internalName" v="web-files"/>
-                     <value n="type" v="1"/>
-                  </hash>
                   <hash>
                      <list n="contributors">
                         <hash>
                            <value n="type" v="2"/>
                         </hash>
                         <hash>
-                           <value n="type" v="7"/>
+                           <value n="type" v="5"/>
                         </hash>
                      </list>
-                     <value n="displayName" v="WEB-INF/classes"/>
+                     <value n="displayName" v="Project Output"/>
                      <hash n="filters">
                         <list n="rules">
+                           <hash>
+                              <value n="pattern" v="WEB-INF/classes/**"/>
+                              <value n="type" v="1"/>
+                           </hash>
                            <hash>
                               <value n="pattern" v="**"/>
                               <value n="type" v="0"/>
@@ -140,32 +119,18 @@
                         </list>
                      </hash>
                      <value n="internalName" v="project-output"/>
-                     <value n="targetWithinJar" v="WEB-INF/classes"/>
                      <value n="type" v="1"/>
-                  </hash>
-                  <hash>
-                     <value n="displayName" v="WEB-INF/lib"/>
-                     <hash n="filters">
-                        <list n="rules">
-                           <hash>
-                              <value n="pattern" v="**"/>
-                              <value n="type" v="0"/>
-                           </hash>
-                        </list>
-                     </hash>
-                     <value n="internalName" v="libraries"/>
-                     <value n="targetWithinJar" v="WEB-INF/lib"/>
-                     <value n="type" v="3"/>
                   </hash>
                </list>
             </hash>
-            <url n="jarURL" path="deploy/Comun_Presentacion_webapp.war"/>
-            <value n="profileClass" v="oracle.jdeveloper.deploy.war.WarProfile"/>
-            <value n="profileName" v="Comun_Presentacion_webapp"/>
+            <url n="jarURL" path="deploy/mnc.comun.presentacion.jar"/>
+            <hash n="LibraryDependencies"/>
+            <value n="profileClass" v="oracle.adfdt.common.deploy.impl.AdfLibraryProfile"/>
+            <value n="profileName" v="presentacionComun"/>
          </hash>
       </hash>
       <list n="profileList">
-         <string v="Comun_Presentacion_webapp"/>
+         <string v="presentacionComun"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">

@@ -13,7 +13,7 @@ import mnc.comun.librerias.correo.MensajeCorreoUtil;
 
 public class PruebaCorreo {
   public static void main(String[] args) {
-    String deCorreo = "portal@oncosalud.com.pe";
+    String deCorreo = "xxx@xxxx";
     
     String mensajHtml ="<div><img src=\"cid:image\">\n" + 
     "\n" + 
@@ -207,11 +207,11 @@ public class PruebaCorreo {
                              "E:/plantilla PPT ecofriendly2.pptx","E:/auna.jpg" });
 
     try {
-      CorreoUtil.enviar("198.198.111.147", mensajeCorreo);
+      CorreoUtil.enviar("x.x.x.x", mensajeCorreo);
       
       //Para logearse con google mail hay que ir al link y seleccionar la opcion desactivar
       //https://www.google.com/settings/security/lesssecureapps
-      //CorreoUtil.enviar("smtp.gmail.com", "mke.nolasco@gmail.com", "198pdam+", mensajeCorreo); // gmail via tls
+      //CorreoUtil.enviar("server.com", "mke.nolasco@gmail.com", "clave", mensajeCorreo); // gmail via tls
     } catch (MessagingException e) {
       if(e instanceof SendFailedException){
         System.out.println("Algun correo inexistente");
